@@ -1,0 +1,22 @@
+<h1>New game</h1>
+
+
+<%# <%= @letters %>
+
+<ul>
+  <% @letters.each do |letter| %>
+    <li class= "letters"><%= letter.strip %></li>
+  <% end %>
+</ul>
+
+<form action="/score" method="post" data-turbo="false">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="question" value="">
+  <input type="submit" class="btn"></button value="">
+</form>
+
+
+<%# <form action="/answer" data-turbo="false">
+    <hr class="my-4">
+   <input type="submit" class="btn btn-primary btn-lg"></button value="Ask!">
+</form> %>
